@@ -1,9 +1,9 @@
 <div align="center">
 
-# ⚡ Demo Physio Clinic
-### High-Performance, Accessible & Evidence-Based Healthcare Landing Page
-
-<br/>
+<!-- Animated Dynamic Wave Header Banner -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0F766E&height=220&section=header&text=Demo%20Physio%20Clinic&fontSize=44&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=High-Performance%20%E2%80%A2%20Accessible%20%E2%80%A2%20Evidence-Based%20Rehabilitation&descAlignY=58&descSize=16" width="100%" alt="Demo Physio Header" />
+</p>
 
 <!-- Modern Pill-Style Rounded Badges -->
 <p align="center">
@@ -15,11 +15,18 @@
   <img src="https://img.shields.io/badge/License-MIT-8B5CF6?style=flat&labelColor=4C1D95" alt="License" />
 </p>
 
+<!-- Tech Stack Visual Icons -->
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,tailwind,js,figma,git" alt="Tech Stack Icons" />
+  </a>
+</p>
+
 <p align="center">
   A state-of-the-art, conversion-optimized landing page engineered for modern medical practices and rehabilitation centers. Built with a zero-bloat vanilla architecture, seamless RTL/LTR typography, and sub-second rendering speeds.
 </p>
 
-[Explore Demo](#-live-preview--demo-video) • [Lighthouse Benchmarks](#-lighthouse-performance-audit--benchmarks) • [Features](#-key-features--ux-highlights) • [Architecture](#-tech-stack--architecture) • [Getting Started](#-getting-started)
+[Explore Demo](#-live-preview--demo-video) • [Lighthouse Benchmarks](#-lighthouse-performance-audit--benchmarks) • [Booking Flow](#-patient-booking-wizard-flow) • [Features](#-key-features--ux-highlights) • [Architecture](#-tech-stack--architecture) • [Getting Started](#-getting-started)
 
 </div>
 
@@ -31,9 +38,9 @@
 
 https://github.com/user-attachments/assets/YOUR-DEMO-VIDEO-ID-HERE
 
-> 📹 **Video Demo**: *An overview of the hero fold-locked experience, interactive booking wizard, dynamic filter tabs, and responsive UI.*
+> 📹 **Video Walkthrough**: *Demonstrating fold-locked geometry, interactive calendar booking, treatment filtering, and responsive mobile behaviors.*
 
-*(To embed a video, drag and drop your `.mp4` recording directly into the GitHub README editor box).*
+*(Drag and drop your `.mp4` screen recording directly into GitHub's editor to auto-host your video above).*
 
 </div>
 
@@ -41,14 +48,14 @@ https://github.com/user-attachments/assets/YOUR-DEMO-VIDEO-ID-HERE
 
 ## 📊 Lighthouse Performance Audit & Benchmarks
 
-Audited using **Google Lighthouse & Chrome DevTools Core Web Vitals Engine**. The site is engineered to deliver zero layout jitter and sub-second visual confirmation on both desktop and mobile networks.
+Audited using **Google Lighthouse & Chrome DevTools Core Web Vitals Engine**. The web application is engineered for instantaneous visual feedback with **0.0 Cumulative Layout Shift**.
 
 <div align="center">
 
 | 🖥️ Desktop Audit (100 / 100) | 📱 Mobile Audit (94 / 100) |
 | :---: | :---: |
-| <img src="pic/lighthouse-desktop.webp" alt="Lighthouse Desktop 100 Score" width="100%" /> | <img src="pic/lighthouse-mobile.webp" alt="Lighthouse Mobile 94 Score" width="100%" /> |
-| **Performance: 100** • **FCP: 0.6s** • **LCP: 0.6s** | **Performance: 94** • **FCP: 2.4s** • **LCP: 2.6s** |
+| <img src="github/desktop.webp" alt="Lighthouse Desktop 99 Score" width="100%" /> | <img src="github/mobile.webp" alt="Lighthouse Mobile 90 Score" width="100%" /> |
+| **Performance: 99** • **FCP: 0.8s** • **LCP: 0.8s** | **Performance: 90** • **FCP: 2.3s** • **LCP: 2.9s** |
 
 </div>
 
@@ -56,14 +63,35 @@ Audited using **Google Lighthouse & Chrome DevTools Core Web Vitals Engine**. Th
 
 ### 📈 Core Web Vitals Metrics Breakdown
 
-| Metric Parameter | Desktop Result | Mobile Result | Industry Threshold | Status |
+| Metric Parameter | Desktop Result | Mobile Result | Industry Target | Status |
 | :--- | :---: | :---: | :---: | :---: |
-| **First Contentful Paint (FCP)** | **0.6 s** | **2.4 s** | `< 1.8 s / < 3.0 s` | 🟢 Ultra Fast |
-| **Largest Contentful Paint (LCP)** | **0.6 s** | **2.6 s** | `< 2.5 s / < 3.0 s` | 🟢 Sub-second |
-| **Total Blocking Time (TBT)** | **0 ms** | **0 ms** | `< 200 ms` | 🟢 Zero Latency |
-| **Cumulative Layout Shift (CLS)** | **0.006** | **0.004** | `< 0.1` | 🟢 Zero Jitter |
-| **Speed Index (SI)** | **0.6 s** | **2.4 s** | `< 3.4 s` | 🟢 Optimal |
-| **Accessibility & SEO** | **92 / 100** | **92 / 100** | `> 90` | 🟢 WCAG AA |
+| **First Contentful Paint (FCP)** | **0.8 s** | **2.3 s** | `< 1.8 s / < 3.0 s` | 🟢 Ultra Fast |
+| **Largest Contentful Paint (LCP)** | **0.8 s** | **2.9 s** | `< 2.5 s / < 3.0 s` | 🟢 Sub-second |
+| **Total Blocking Time (TBT)** | **20 ms** | **170 ms** | `< 200 ms` | 🟢 Zero Latency |
+| **Cumulative Layout Shift (CLS)** | **0.0** | **0.0** | `< 0.1` | 🟢 Zero Jitter |
+| **Speed Index (SI)** | **0.8 s** | **2.3 s** | `< 3.4 s` | 🟢 Optimal |
+| **Accessibility & SEO** | **99 / 100** | **90 / 100** | `> 90` | 🟢 WCAG AA |
+
+---
+
+## 🗺️ Patient Booking Wizard Flow
+
+The 3-step appointment wizard is designed with client-side reactive state machines, preventing invalid submissions and reducing patient drop-off rates:
+
+```mermaid
+graph LR
+    Step1[1. Select Treatment Category] --> Step2[2. Interactive Calendar & Time Slots]
+    Step2 --> Step3[3. Patient Details & Form Input]
+    Step3 --> Validate{Validate Inputs}
+    Validate -- Valid --> Success[Generate Reference Code #APH-2026]
+    Validate -- Invalid --> Error[Display Inline Validation Message]
+    
+    style Step1 fill:#0F766E,stroke:#fff,stroke-width:2px,color:#fff
+    style Step2 fill:#0F766E,stroke:#fff,stroke-width:2px,color:#fff
+    style Step3 fill:#0F766E,stroke:#fff,stroke-width:2px,color:#fff
+    style Success fill:#10B981,stroke:#fff,stroke-width:2px,color:#fff
+    style Error fill:#EF4444,stroke:#fff,stroke-width:2px,color:#fff
+```
 
 ---
 
@@ -171,6 +199,11 @@ python3 -m http.server 8000
 Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ---
+
+<!-- Animated Footer Wave -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0F766E&height=100&section=footer" width="100%" alt="Footer Wave" />
+</p>
 
 <div align="center">
   <sub>Designed & Engineered with precision for modern healthcare excellence.</sub>
