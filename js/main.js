@@ -239,9 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const shamsiMonth = parseInt(persianToEnglishDigits(parts[1]));
         const shamsiDay = parseInt(persianToEnglishDigits(parts[2]));
 
-        const monthsInFarsi = ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'];
-        
-        calendarHeaderLabel.textContent = `${monthsInFarsi[shamsiMonth - 1]} ${shamsiYear}`;
+        const monthsInEnglish = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];        
+        calendarHeaderLabel.textContent = `${monthsInEnglish[shamsiMonth - 1]} ${shamsiYear}`;
         
         const isShamsiLeap = (year) => {
             const mod = year % 33;
@@ -319,18 +318,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // Setup Back Button state representation
         if (currentStep === 1) {
             if (prevBtnBooking) prevBtnBooking.classList.add('invisible');
-            if (nextBtnBooking) nextBtnBooking.querySelector('span').textContent = 'مرحله بعدی';
+            if (nextBtnBooking) nextBtnBooking.querySelector('span').textContent = 'Next step';
         } else if (currentStep === totalSteps) {
             if (prevBtnBooking) prevBtnBooking.classList.remove('invisible');
-            if (nextBtnBooking) nextBtnBooking.querySelector('span').textContent = 'تایید نهایی نوبت';
+            if (nextBtnBooking) nextBtnBooking.querySelector('span').textContent = 'Final Confirmation';
         } else {
             if (prevBtnBooking) prevBtnBooking.classList.remove('invisible');
-            if (nextBtnBooking) nextBtnBooking.querySelector('span').textContent = 'مرحله بعدی';
+            if (nextBtnBooking) nextBtnBooking.querySelector('span').textContent = 'Next step';
         }
 
         // Align RTL progress indicator values
         if (stepIndicator) {
-            stepIndicator.textContent = `مرحله ${currentStep} از ${totalSteps}`;
+            stepIndicator.textContent = `Step ${currentStep} of ${totalSteps}`;
         }
         if (progressBarFill) {
             progressBarFill.style.width = `${((currentStep - 1) / (totalSteps - 1)) * 100}%`;
