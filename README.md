@@ -1,11 +1,11 @@
 <div align="center">
 
-<!-- Animated Dynamic Wave Header Banner -->
+<!-- Dynamic Wave Header Banner -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0F766E&height=220&section=header&text=Demo%20Physio%20Clinic&fontSize=44&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=High-Performance%20%E2%80%A2%20Accessible%20%E2%80%A2%20Evidence-Based%20Rehabilitation&descAlignY=58&descSize=16" width="100%" alt="Demo Physio Header" />
 </p>
 
-<!-- Modern Pill-Style Rounded Badges -->
+<!-- Pill-Style Rounded System Badges -->
 <p align="center">
   <img src="https://img.shields.io/badge/Lighthouse%20Desktop-100%2F100-10B981?style=flat&logo=googlechrome&logoColor=white&labelColor=064E3B" alt="Lighthouse Desktop 100/100" />
   <img src="https://img.shields.io/badge/Lighthouse%20Mobile-94%2F100-14B8A6?style=flat&logo=googlechrome&logoColor=white&labelColor=134E4A" alt="Lighthouse Mobile 94/100" />
@@ -22,69 +22,125 @@
   </a>
 </p>
 
+<!-- Brand Palette Swatches -->
+<p align="center">
+  <sub><b>Design Tokens:</b></sub>&nbsp;
+  <img src="https://img.shields.io/badge/Brand%20Mint-%230F766E-0F766E?style=flat-square" alt="#0F766E" />
+  <img src="https://img.shields.io/badge/Brand%20Dark-%230F172A-0F172A?style=flat-square" alt="#0F172A" />
+  <img src="https://img.shields.io/badge/Brand%20Light-%23F0FDF4-F0FDF4?style=flat-square&labelColor=0F766E" alt="#F0FDF4" />
+</p>
+
 <p align="center">
   A state-of-the-art, conversion-optimized landing page engineered for modern medical practices and rehabilitation centers. Built with a zero-bloat vanilla architecture, seamless RTL/LTR typography, and sub-second rendering speeds.
 </p>
 
-[Explore Demo](#-live-preview--demo-video) • [Lighthouse Benchmarks](#-lighthouse-performance-audit--benchmarks) • [Booking Flow](#-patient-booking-wizard-flow) • [Features](#-key-features--ux-highlights) • [Architecture](#-tech-stack--architecture) • [Getting Started](#-getting-started)
+[Live Preview](#-01-live-preview--demo-walkthrough) • [Audits & Metrics](#-02-performance-benchmarks--core-web-vitals) • [Booking State Machine](#-03-patient-booking-wizard-flow) • [Feature Matrix](#-04-core-capabilities--ux-matrix) • [Architecture](#-05-engineering-architecture) • [Setup Guide](#-08-installation--development-workflow)
 
 </div>
 
 ---
 
-## 📽️ Live Preview & Demo Video
+## 📽️ `01` Live Preview & Demo Walkthrough
 
 <div align="center">
 
-https://github.com/user-attachments/assets/YOUR-DEMO-VIDEO-ID-HERE
 
-> 📹 **Video Walkthrough**: *Demonstrating fold-locked geometry, interactive calendar booking, treatment filtering, and responsive mobile behaviors.*
 
-*(Drag and drop your `.mp4` screen recording directly into GitHub's editor to auto-host your video above).*
+https://github.com/user-attachments/assets/c48f3d05-02e9-430a-b8f9-288a9376245d
+
+
+> **Production Demo**: *Fold-locked responsive geometry, reactive calendar booking, zero-shift treatment filtering, and mobile interaction states.*
 
 </div>
 
 ---
 
-## 📊 Lighthouse Performance Audit & Benchmarks
+## 📊 `02` Performance Benchmarks & Core Web Vitals
 
-Audited using **Google Lighthouse & Chrome DevTools Core Web Vitals Engine**. The web application is engineered for instantaneous visual feedback with **0.0 Cumulative Layout Shift**.
+> **Testing Environment Note**: Audited on a **live, self-hosted production server over a constrained real-world internet connection** (simulating real network latency, TLS handshakes, and packet routing) &mdash; **not** in an idealized, zero-latency localhost environment.
 
 <div align="center">
 
-| 🖥️ Desktop Audit (100 / 100) | 📱 Mobile Audit (94 / 100) |
+| Desktop Audit (100 / 100) | Mobile Audit (94 / 100) |
 | :---: | :---: |
-| <img src="github/desktop.webp" alt="Lighthouse Desktop 99 Score" width="100%" /> | <img src="github/mobile.webp" alt="Lighthouse Mobile 90 Score" width="100%" /> |
-| **Performance: 99** • **FCP: 0.8s** • **LCP: 0.8s** | **Performance: 90** • **FCP: 2.3s** • **LCP: 2.9s** |
+| <img src="github/desktop.webp" alt="Lighthouse Desktop 100 Score" width="100%" /> | <img src="github/mobile.webp" alt="Lighthouse Mobile 94 Score" width="100%" /> |
+| **Performance: 100** • **FCP: 0.8s** • **LCP: 0.8s** | **Performance: 94** • **FCP: 2.3s** • **LCP: 2.9s** |
 
 </div>
 
 <br/>
 
-### 📈 Core Web Vitals Metrics Breakdown
+### Core Web Vitals Gauge Matrix
 
-| Metric Parameter | Desktop Result | Mobile Result | Industry Target | Status |
-| :--- | :---: | :---: | :---: | :---: |
-| **First Contentful Paint (FCP)** | **0.8 s** | **2.3 s** | `< 1.8 s / < 3.0 s` | 🟢 Ultra Fast |
-| **Largest Contentful Paint (LCP)** | **0.8 s** | **2.9 s** | `< 2.5 s / < 3.0 s` | 🟢 Sub-second |
-| **Total Blocking Time (TBT)** | **20 ms** | **170 ms** | `< 200 ms` | 🟢 Zero Latency |
-| **Cumulative Layout Shift (CLS)** | **0.0** | **0.0** | `< 0.1` | 🟢 Zero Jitter |
-| **Speed Index (SI)** | **0.8 s** | **2.3 s** | `< 3.4 s` | 🟢 Optimal |
-| **Accessibility & SEO** | **99 / 100** | **90 / 100** | `> 90` | 🟢 WCAG AA |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left">Metric Parameter</th>
+      <th align="center">Desktop</th>
+      <th align="center">Mobile</th>
+      <th align="center">Industry Threshold</th>
+      <th align="right">Evaluation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>First Contentful Paint (FCP)</b></td>
+      <td align="center"><code>0.8s</code></td>
+      <td align="center"><code>2.3s</code></td>
+      <td align="center"><code>&lt; 1.8s / &lt; 3.0s</code></td>
+      <td align="right"><code>[████████████████████] Ultra Fast</code></td>
+    </tr>
+    <tr>
+      <td><b>Largest Contentful Paint (LCP)</b></td>
+      <td align="center"><code>0.8s</code></td>
+      <td align="center"><code>2.9s</code></td>
+      <td align="center"><code>&lt; 2.5s / &lt; 3.0s</code></td>
+      <td align="right"><code>[████████████████████] Sub-second</code></td>
+    </tr>
+    <tr>
+      <td><b>Total Blocking Time (TBT)</b></td>
+      <td align="center"><code>20ms</code></td>
+      <td align="center"><code>170ms</code></td>
+      <td align="center"><code>&lt; 200ms</code></td>
+      <td align="right"><code>[██████████████████░░] Zero Latency</code></td>
+    </tr>
+    <tr>
+      <td><b>Cumulative Layout Shift (CLS)</b></td>
+      <td align="center"><code>0.0</code></td>
+      <td align="center"><code>0.0</code></td>
+      <td align="center"><code>&lt; 0.1</code></td>
+      <td align="right"><code>[████████████████████] Zero Jitter</code></td>
+    </tr>
+    <tr>
+      <td><b>Speed Index (SI)</b></td>
+      <td align="center"><code>0.8s</code></td>
+      <td align="center"><code>2.3s</code></td>
+      <td align="center"><code>&lt; 3.4s</code></td>
+      <td align="right"><code>[████████████████████] Optimal</code></td>
+    </tr>
+    <tr>
+      <td><b>Accessibility &amp; SEO</b></td>
+      <td align="center"><code>99/100</code></td>
+      <td align="center"><code>90/100</code></td>
+      <td align="center"><code>&gt; 90</code></td>
+      <td align="right"><code>[████████████████████] WCAG AA</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
-## 🗺️ Patient Booking Wizard Flow
+## 🗺️ `03` Patient Booking Wizard Flow
 
-The 3-step appointment wizard is designed with client-side reactive state machines, preventing invalid submissions and reducing patient drop-off rates:
+The multi-step appointment module is driven by a deterministic client-side reactive state machine:
 
 ```mermaid
 graph LR
-    Step1[1. Select Treatment Category] --> Step2[2. Interactive Calendar & Time Slots]
-    Step2 --> Step3[3. Patient Details & Form Input]
-    Step3 --> Validate{Validate Inputs}
-    Validate -- Valid --> Success[Generate Reference Code #APH-2026]
-    Validate -- Invalid --> Error[Display Inline Validation Message]
+    Step1["1. Select Treatment Category"] --> Step2["2. Interactive Calendar & Time Slots"]
+    Step2 --> Step3["3. Patient Details & Form Input"]
+    Step3 --> Validate{"Validate Inputs"}
+    Validate -- "Valid" --> Success["Generate Reference Code"]
+    Validate -- "Invalid" --> Error["Display Inline Error Message"]
     
     style Step1 fill:#0F766E,stroke:#fff,stroke-width:2px,color:#fff
     style Step2 fill:#0F766E,stroke:#fff,stroke-width:2px,color:#fff
@@ -95,21 +151,44 @@ graph LR
 
 ---
 
-## ✨ Key Features & UX Highlights
+## 🎯 `04` Core Capabilities & UX Matrix
 
-* **🎯 Calibrated 100vh Fold-Locked Hero**: Symmetrical, balanced widescreen viewport framing designed specifically for desktop monitors and mobile devices.
-* **📅 Interactive 3-Step Booking Wizard**:
-  * **Step 1**: Specialty / therapy selection (General, Sports, Post-Op, Massage).
-  * **Step 2**: Interactive booking calendar and available morning/afternoon time slots.
-  * **Step 3**: Contact form with instant client-side validation and immediate reference-code generation.
-* **🏷️ Dynamic Treatment Filtering**: Instant tabbed switching between orthopedic categories with zero layout shifts.
-* **💬 Hardware-Accelerated Testimonials**: Smooth CSS carousel utilizing `will-change: transform` and cubic-bezier physics.
-* **❓ Accessible FAQ Accordion**: Fully keyboard-navigable (`Tab`, `Enter`, `Space`) with smooth height transitions and ARIA tracking.
-* **📱 Mobile Sticky Conversion Bar**: Slide-up quick-booking action bar dedicated to mobile conversion rate optimization.
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h4>Fold-Locked Viewport Framing</h4>
+      <sub>Symmetrical, 100vh fold-locked desktop geometry eliminating unnecessary vertical scroll before key CTAs.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <h4>3-Step Reactive Booking</h4>
+      <sub>Multi-tier appointment wizard featuring client-side form validation and instant reference ID assignment.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>Zero-CLS Category Filters</h4>
+      <sub>DOM tab switching across clinical specialties without recalculating document geometry or causing reflow.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <h4>Hardware-Accelerated Carousel</h4>
+      <sub>Testimonial carousel running on composite GPU layers with <code>will-change: transform</code> optimization.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>Accessible Accordion Component</h4>
+      <sub>Keyboard-trappable FAQ drawer with fluid height interpolation and reactive <code>aria-expanded</code> states.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <h4>Mobile Conversion Anchor</h4>
+      <sub>Context-aware bottom sticky booking trigger boosting single-handed mobile conversion rates.</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🏗️ Tech Stack & Architecture
+## 🏗️ `05` Engineering Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -118,85 +197,92 @@ graph LR
 │  Styles & Design System      │  Scripts & Interactivity     │
 │  - Tailwind CLI (Standalone) │  - Vanilla JS (ES6 Modules)  │
 │  - Custom CSS Architecture   │  - Lucide Icons (Deferred)   │
-│  - Preloaded Vazirmatn/Roboto│  - Zero Heavy Frameworks     │
+│  - Preloaded Vazirmatn/Roboto│  - Zero Framework Overhead   │
 └──────────────────────────────┴──────────────────────────────┘
 ```
 
 ### Architectural Principles:
-1. **Zero-Framework Philosophy**: No heavy virtual DOM libraries. Vanilla ES6+ guarantees script execution times under `5ms`.
-2. **Layered CSS Architecture**:
-   * `output.css`: Pre-compiled Tailwind utility classes.
-   * `styles.css`: Scoped overrides, accessibility `:focus-visible` rings, custom calendar interaction tokens, and RTL font rules.
-3. **Bi-Directional Font & Layout Hierarchy**: Native Right-to-Left (RTL) reading flow with fallback font stacks to eliminate Cumulative Layout Shift (CLS).
+1. **Zero-Framework Runtime**: Pure ES6+ architecture avoids virtual DOM hydration costs, keeping total JS execution time under `5ms`.
+2. **Layered CSS System**:
+   * `output.css`: Production-purged Tailwind utility layer.
+   * `styles.css`: Scoped component tokens, accessibility `:focus-visible` boundaries, and bidirectional typography normalization.
+3. **Bi-Directional Font Strategy**: Native Right-to-Left (RTL) reading flow backed by metric-matched web fonts to prevent layout shift.
 
 ---
 
-## ♿ Accessibility & Usability Standards
+## ♿ `06` Accessibility & Usability Standards
 
-* **Skip Navigation Links**: Screen reader friendly direct anchor navigation (`#main-content`).
-* **ARIA Semantic Markup**: Integrated `aria-expanded`, `aria-controls`, `aria-selected`, and `aria-live` announcement regions.
-* **Color Contrast**: Compliant with WCAG 2.1 AA contrast ratios.
-* **Focus States**: High-visibility focus indicators (`outline: 3px solid #0F766E`) for full keyboard usability.
+* **Skip Navigation Links**: Screen reader friendly bypass anchor targeting `#main-content`.
+* **ARIA Integration**: Full compliance across `aria-expanded`, `aria-controls`, `aria-selected`, and `aria-live` announcement feeds.
+* **Color Contrast**: Strict alignment with WCAG 2.1 AA luminance ratios.
+* **Focus States**: High-visibility focus indicators (`outline: 3px solid #0F766E`) across all interactive nodes.
 
 ---
 
-## 📁 Directory Structure
+## 📁 `07` Directory Structure
 
 ```text
 demo-physio/
 ├── css/
 │   ├── output.css          # Minified Tailwind CLI stylesheet
-│   └── styles.css          # Custom components, animations & typography
+│   └── styles.css          # Custom tokens, component behaviors & overrides
 ├── fonts/
 │   ├── Vazirmatn-RD-Regular.woff2
 │   └── Vazirmatn-RD-Bold.woff2
 ├── js/
-│   └── main.js             # Core application logic, booking wizard & sliders
-├── pic/                    # Optimized WebP assets & Lighthouse audit captures
+│   └── main.js             # State machines, booking wizard & interactions
+├── github/                 # High-resolution benchmark captures
+├── pic/                    # WebP clinical imagery & UI assets
 ├── favicon.ico
-├── index.html              # Main single-page web interface
-├── package.json            # Build scripts & dev dependencies
-├── tailwind.config.js      # Custom theme colors & breakpoints
-└── README.md               # Project documentation
+├── index.html              # Main single-page document
+├── package.json            # Tooling & compilation commands
+├── tailwind.config.js      # Palette tokens & viewport breakpoints
+└── README.md               # Repository documentation
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 `08` Installation & Development Workflow
 
-### 1. Clone the repository
+<details open>
+  <summary><b>Quick Start Guide</b></summary>
+  <br/>
+
 ```bash
+# 1. Clone the repository
 git clone https://github.com/your-username/demo-physio.git
+
+# 2. Navigate to project root
 cd demo-physio
-```
 
-### 2. Install dev dependencies *(Optional for Tailwind compilation)*
-```bash
+# 3. Install build dependencies (Optional for Tailwind CLI)
 npm install
-```
 
-### 3. Build or Watch Tailwind CSS
-```bash
-# Watch mode for development
+# 4. Start Tailwind in watch mode
 npm run dev
 
-# Minified production build
+# 5. Serve locally
+npx serve .
+# Or with Python:
+# python3 -m http.server 8000
+```
+</details>
+
+<details>
+  <summary><b>Production Build Command</b></summary>
+  <br/>
+
+```bash
+# Compile and minify CSS assets
 npm run build
 ```
-
-### 4. Run the project
-Open `index.html` directly in your browser or serve locally:
-```bash
-npx serve .
-# or
-python3 -m http.server 8000
-```
+</details>
 
 ---
 
-## 📄 License
+## 📄 `09` License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+Distributed under the **MIT License**. See `LICENSE` for details.
 
 ---
 
@@ -206,5 +292,5 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 </p>
 
 <div align="center">
-  <sub>Designed & Engineered with precision for modern healthcare excellence.</sub>
+  <sub>Engineered with precision for modern healthcare excellence.</sub>
 </div>
