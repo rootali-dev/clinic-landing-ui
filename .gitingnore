@@ -1,7 +1,26 @@
+# Dependencies
 node_modules/
+
+# Python Cache & Virtual Environments
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Tailwind Standalone Binaries
 tailwindcss
 tailwindcss-linux-x64
+*.exe
+
+# OS & Editor Files
 .DS_Store
-‍
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment Variables
+.env
+.env.local
