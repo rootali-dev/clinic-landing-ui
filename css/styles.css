@@ -1,0 +1,198 @@
+/* ==========================================================================
+   VIRA CLINIC ADVANCED TYPOGRAPHY & INTERACTION STYLES
+   ========================================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ۱. تعریف استاندارد و یکپارچه فونت وزیرمتن (بدون دوگانگی اسم) */
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/Vazirmatn-RD-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/Vazirmatn-RD-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ۲. درهم‌شکستن تله اولویت تلویند و تزریق سراسری فونت به کل ساختار سایت */
+html, 
+body, 
+.font-sans {
+    direction: rtl !important;
+    text-align: right !important;
+    font-family: 'Vazirmatn', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* ۳. استایل‌های دسترسی‌پذیری و کامپوننت‌های اختصاصی کلینیک */
+*:focus-visible {
+    outline: 3px solid #0F766E !important; /* brand-mint */
+    outline-offset: 3px !important;
+}
+
+/* مدیریت وضعیت فعال رادیوباتن‌ها در ویزارد رزرو */
+label:has(input[type="radio"]:checked) {
+    border-color: #0F766E !important;
+    background-color: #F0FDF4 !important; /* brand-mintLight */
+}
+
+label:has(input[type="radio"]:checked) .input-marker {
+    border-color: #0F766E !important;
+    background-color: #0F766E !important;
+}
+
+label:has(input[type="radio"]:checked) .input-marker::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+/* سانس‌های زمانی رزرو */
+label.time-label:has(input[type="radio"]:checked) {
+    background-color: #0F766E !important;
+    color: #FFFFFF !important;
+    border-color: #0F766E !important;
+}
+
+/* دکمه‌های فیلتر تکنیک‌های درمانی */
+button.filter-tab[aria-selected="true"] {
+    background-color: #0F766E !important;
+    color: #FFFFFF !important;
+}
+
+button.filter-tab[aria-selected="false"] {
+    background-color: #F8FAFC; 
+    color: #334155; 
+    border: 1px solid #E2E8F0;
+}
+
+button.filter-tab[aria-selected="false"]:hover {
+    background-color: #F1F5F9;
+}
+
+/* شتاب‌دهنده سخت‌افزاری اسلایدر رضایت‌نامه‌ها */
+#testimonial-slider {
+    will-change: transform;
+    transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* استایل‌های تقویم نوبت‌دهی */
+.calendar-day-disabled {
+    color: #94A3B8 !important; 
+    cursor: not-allowed !important;
+    background-color: transparent !important;
+}
+
+.calendar-day-active {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.calendar-day-active:hover {
+    background-color: #F0FDF4; 
+    color: #0F766E;
+}
+
+.calendar-day-selected {
+    background-color: #0F766E !important;
+    color: #FFFFFF !important;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
+}
+
+/* انیمیشن آکاردئون سوالات متداول */
+.faq-panel {
+    transition: max-height 250ms ease-out, opacity 250ms ease-out;
+}
+
+/* حذف اسکرول‌بار پیش‌فرض در المان‌های خاص */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* افکت‌های هاور تصاویر و کارت‌ها */
+.group:hover img {
+    transform: scale(1.05);
+}
+
+.group:hover .backdrop-blur-md {
+    transform: translateY(-4px) translateX(4px);
+}
+
+/* ==========================================================================
+   HERO SECTION IMAGE FIX (CENTERING GAP BETWEEN TEXT & IMAGE)
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+    .hero-container {
+        max-width: 82rem !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        position: relative !important;
+        /* کالیبره کردن شیفت برای قرارگیری دقیق فاصله بین عکس و متن در وسط صفحه */
+        left: calc(20% * 7 / 24) !important;
+    }
+
+    .hero-main-grid {
+        display: grid !important;
+        grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+        gap: 2.5rem !important;
+        height: calc(100vh - 12.5rem) !important;
+        min-height: 480px !important;
+        max-height: 660px !important;
+        align-items: stretch !important;
+    }
+
+    .hero-image-column {
+        grid-column: span 7 / span 7 !important;
+        height: 100% !important;
+        width: 100% !important;
+        display: flex !important;
+        position: relative !important;
+    }
+
+    .hero-image-card {
+        width: 140% !important;       /* حفظ ۴۰ درصد عرض اضافه */
+        margin-left: -40% !important; /* حفظ هدایت اختصاصی به سمت چپ */
+        height: 100% !important;
+        aspect-ratio: auto !important;
+        border-radius: 1.75rem !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    .hero-container {
+        left: 0 !important;
+    }
+
+    .hero-image-card {
+        width: 100% !important;
+        height: 360px !important;
+        min-height: 300px !important;
+        margin-left: 0 !important;
+    }
+}
+
+.hero-image-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}

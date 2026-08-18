@@ -1,0 +1,7 @@
+node_modules/
+__pycache__/
+*.pyc
+tailwindcss
+tailwindcss-linux-x64
+.DS_Store
+‍

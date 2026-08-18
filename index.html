@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo Physiotherapy Clinic — specialist physiotherapy, sports injury rehabilitation, and joint recovery powered by advanced electrotherapy equipment. Book your evaluation online.">
+    <title>Demo Physiotherapy Clinic | Evidence-Based Rehabilitation Care</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- 1. Preload Roboto for zero CLS and faster LCP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
+
+    <!-- 2. Compiled, minified Tailwind CLI stylesheet (non-blocking) -->
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- 3. Icon script deferred to avoid blocking render -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+</head>
+<body class="bg-brand-bg text-brand-slate font-sans">
+
+    <!-- Screen Reader Skip Links -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-mint focus:text-white focus:rounded-md focus:outline-none focus:ring-2 focus:ring-brand-mint focus:ring-offset-2">
+        Skip to main content
+    </a>
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all duration-300" id="main-header">
+        <div id="header-inner" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between transition-all duration-300">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint rounded-lg p-1" aria-label="Demo Physiotherapy home">
+                <div class="w-10 h-10 rounded-xl bg-brand-mint flex items-center justify-center text-white transform group-hover:scale-105 transition-transform duration-300 shadow-md shadow-brand-mint/20">
+                    <!-- SVG Geometric Icon of Motion/S-curve -->
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-brand-dark">Demo <span class="text-brand-mint">Physio</span></span>
+                    <span class="block text-[10px] text-brand-slate uppercase tracking-widest font-semibold">Specialist Clinic</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+                <a href="#treatments" class="text-brand-slate hover:text-brand-mint font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint rounded">Treatments</a>
+                <a href="#why-choose-us" class="text-brand-slate hover:text-brand-mint font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint rounded">Why Demo Physio</a>
+                <a href="#doctors" class="text-brand-slate hover:text-brand-mint font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint rounded">Our Doctors</a>
+                <a href="#testimonials" class="text-brand-slate hover:text-brand-mint font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint rounded">Success Stories</a>
+                <a href="#faq" class="text-brand-slate hover:text-brand-mint font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint rounded">FAQ</a>
+            </nav>
+
+            <!-- Navigation CTA -->
+            <div class="hidden md:flex items-center gap-6">
+                <a href="tel:+98215550199" class="text-brand-slate hover:text-brand-mint font-medium text-sm transition-colors duration-200 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint rounded" aria-label="Call the clinic">
+                    <i data-lucide="phone" class="w-4 h-4 text-brand-mint"></i>
+                    021-5550199
+                </a>
+                <a href="#booking-section" class="bg-brand-mint hover:bg-brand-mint/90 text-white font-bold px-5 py-2.5 rounded-xl shadow-md shadow-brand-mint/10 hover:shadow-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint focus-visible:ring-offset-2">
+                    Book Online
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Menu Toggle Button -->
+            <button id="mobile-menu-btn" type="button" class="md:hidden inline-flex items-center justify-center p-2.5 rounded-lg text-brand-slate hover:text-brand-dark hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+                <span class="block" id="menu-icon-open">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </span>
+                <span class="hidden" id="menu-icon-close">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 transition-all duration-300" aria-label="Mobile navigation">
+            <div class="px-4 pt-4 pb-6 space-y-3 shadow-inner">
+                <a href="#treatments" class="block px-3 py-2.5 rounded-lg text-base font-medium text-brand-slate hover:text-brand-mint hover:bg-slate-50 transition-colors">Treatments</a>
+                <a href="#why-choose-us" class="block px-3 py-2.5 rounded-lg text-base font-medium text-brand-slate hover:text-brand-mint hover:bg-slate-50 transition-colors">Why Demo Physio</a>
+                <a href="#doctors" class="block px-3 py-2.5 rounded-lg text-base font-medium text-brand-slate hover:text-brand-mint hover:bg-slate-50 transition-colors">Our Doctors</a>
+                <a href="#testimonials" class="block px-3 py-2.5 rounded-lg text-base font-medium text-brand-slate hover:text-brand-mint hover:bg-slate-50 transition-colors">Success Stories</a>
+                <a href="#faq" class="block px-3 py-2.5 rounded-lg text-base font-medium text-brand-slate hover:text-brand-mint hover:bg-slate-50 transition-colors">FAQ</a>
+                <div class="border-t border-slate-100 pt-4 flex flex-col gap-3">
+                    <a href="tel:+98215550199" class="flex items-center gap-2 px-3 py-2 text-brand-slate font-medium text-base">
+                        <i data-lucide="phone" class="w-5 h-5 text-brand-mint"></i>
+                        Call: 021-5550199
+                    </a>
+                    <a href="#booking-section" id="mobile-menu-cta" class="w-full text-center bg-brand-mint text-white font-bold py-3 px-4 rounded-xl shadow-md transition-colors hover:bg-brand-mint/90">
+                        Book Instantly
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <!-- Hero Section -->
+        <!-- Hero Section -->
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden flex flex-col justify-between w-full min-h-[calc(100vh-5rem)] lg:h-[calc(100vh-5rem)] py-4 lg:py-0 bg-gradient-to-b from-white via-brand-bg to-white" aria-labelledby="hero-heading">
+            <!-- Background Decorative Accents -->
+            <div class="absolute inset-0 z-0 opacity-30 pointer-events-none">
+                <div class="absolute top-10 right-10 w-96 h-96 bg-brand-mint/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-10 left-10 w-80 h-80 bg-brand-blue/5 rounded-full blur-3xl"></div>
+            </div>
+        
+            <!-- Main Flex-Grow Content Wrapper with expanded width -->
+            <div class="hero-container flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center relative z-10">
+                <div class="hero-main-grid grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 w-full py-2 lg:py-4">
+                    
+                    <!-- Hero Image Column: Expanded Width & Tuned Height -->
+                    <div class="hero-image-column lg:col-span-7 relative w-full order-2 lg:order-2">
+                        <div class="hero-image-card group relative w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white transition-all duration-300">
+                            <img src="pic/national-cancer-institute-1c8sj2IO2I4-unsplash.webp" 
+                                 alt="Demo Physiotherapy Clinic main building" 
+                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                                 loading="eager">
+                            <div class="absolute bottom-6 left-6 right-6 backdrop-blur-md bg-white/80 rounded-2xl p-4 shadow-lg text-xs sm:text-sm font-medium text-brand-dark border border-white/40 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:translate-x-1">
+                                <div class="flex items-center gap-3">
+                                    <span class="relative flex h-3 w-3 flex-shrink-0">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-600"></span>
+                                    </span>
+                                    <span class="leading-relaxed font-extrabold text-brand-dark">Main clinic building — private parking for doctors and patients</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Hero Content Column -->
+                    <div class="lg:col-span-5 flex flex-col justify-center space-y-6 text-center lg:text-left order-1 lg:order-1">
+                        <div class="inline-flex items-center gap-2 bg-brand-mintLight text-brand-mint px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide border border-brand-mint/10 shadow-sm mx-auto lg:mx-0">
+                            <span class="flex h-2 w-2 relative">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-mint opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-mint"></span>
+                            </span>
+                            Accepting new patients & supplemental insurance
+                        </div>
+            
+                        <h1 id="hero-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-brand-dark leading-[1.3]">
+                            Life Without Pain <br>
+                            <span class="text-brand-mint">Starts at Demo Physio</span>
+                        </h1>
+            
+                        <p class="text-base md:text-lg text-brand-slate max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Medical expertise, advanced electrotherapy, and tailored treatment plans for athletes and everyday life.
+                        </p>
+            
+                        <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
+                            <a href="#booking-section" class="bg-brand-mint hover:bg-brand-mint/90 text-white font-bold text-base px-6 py-3.5 rounded-2xl shadow-lg shadow-brand-mint/20 hover:shadow-xl transition-all duration-200 text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint focus-visible:ring-offset-2">
+                                Book Instantly
+                            </a>
+                            <a href="#treatments" class="bg-white hover:bg-slate-50 text-brand-dark font-bold text-base px-6 py-3.5 rounded-2xl border border-slate-200 hover:border-slate-300 transition-all duration-200 text-center flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint">
+                                Explore Treatments
+                                <i data-lucide="arrow-down" class="w-4 h-4 text-brand-slate"></i>
+                            </a>
+                        </div>
+            
+                        <div class="grid grid-cols-2 sm:flex sm:flex-row sm:flex-wrap gap-x-4 gap-y-5 sm:gap-4 justify-center lg:justify-start pt-6 border-t border-slate-100/80 mt-6">
+                            
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-9 h-9 rounded-xl bg-yellow-50 text-yellow-500 flex items-center justify-center shadow-sm flex-shrink-0">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm sm:text-xs font-black text-brand-dark leading-tight">4.9 out of 5</div>
+                                    <div class="text-xs sm:text-[10px] text-brand-slate font-medium mt-0.5">1,200+ patients treated</div>
+                                </div>
+                            </div>
+            
+                            <div class="flex items-center gap-2.5 justify-end sm:justify-start">
+                                <div class="w-9 h-9 rounded-xl bg-brand-mintLight text-brand-mint flex items-center justify-center shadow-sm flex-shrink-0">
+                                    <i data-lucide="user-check" class="w-4 h-4"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm sm:text-xs font-black text-brand-dark leading-tight">One-on-one care</div>
+                                    <div class="text-xs sm:text-[10px] text-brand-slate font-medium mt-0.5">Direct physician oversight</div>
+                                </div>
+                            </div>
+            
+                            <div class="flex items-center gap-2.5 col-span-2 sm:col-span-1 mx-auto sm:mx-0 pt-2 sm:pt-0">
+                                <div class="w-9 h-9 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center shadow-sm flex-shrink-0">
+                                    <i data-lucide="file-check-2" class="w-4 h-4"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm sm:text-xs font-black text-brand-dark leading-tight">Insurance accepted</div>
+                                    <div class="text-xs sm:text-[10px] text-brand-slate font-medium mt-0.5">Online invoicing</div>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <!-- Premium Animated Scroll Indicator -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-1.5 cursor-pointer z-20 opacity-80 hover:opacity-100 transition-opacity">
+                <span class="text-[10px] font-bold tracking-widest text-brand-slate uppercase">Scroll</span>
+                <div class="w-6 h-10 rounded-full border-2 border-brand-slate/40 flex justify-center p-1">
+                    <div class="w-1.5 h-2.5 rounded-full bg-brand-mint animate-bounce"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Treatments & Services Section -->
+        <section id="treatments" class="py-16 bg-white border-t border-slate-100" aria-labelledby="services-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                    <h2 id="services-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-dark">
+                        Modern Treatment, Matched to Your Injury
+                    </h2>
+                    <p class="text-lg text-brand-slate">
+                        Choose a category below to explore the advanced techniques we use to restore full range of motion.
+                    </p>
+
+                    <!-- Interactive Filtering Tabs -->
+                    <div class="flex flex-wrap justify-center gap-2 pt-4" role="tablist" aria-label="Treatment category">
+                        <button id="tab-all" role="tab" aria-selected="true" aria-controls="treatment-grid" class="filter-tab px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint" data-target="all">
+                            All Treatments
+                        </button>
+                        <button id="tab-spine" role="tab" aria-selected="false" aria-controls="treatment-grid" class="filter-tab px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint" data-target="spine">
+                            Spine & Neck
+                        </button>
+                        <button id="tab-sports" role="tab" aria-selected="false" aria-controls="treatment-grid" class="filter-tab px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint" data-target="sports">
+                            Sports Injuries
+                        </button>
+                        <button id="tab-rehab" role="tab" aria-selected="false" aria-controls="treatment-grid" class="filter-tab px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint" data-target="rehab">
+                            Post-Op & Joints
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Treatment Cards Grid -->
+                <div id="treatment-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    
+                    <!-- Card 1 (Spine) -->
+                    <div class="treatment-card border border-slate-100 rounded-2xl bg-brand-bg p-6 lg:p-8 space-y-4 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between" data-category="spine">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-mintLight text-brand-mint flex items-center justify-center">
+                                <i data-lucide="bone" class="w-6 h-6 text-brand-mint"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-dark">Spinal Disc Decompression</h3>
+                            <p class="text-sm text-brand-slate leading-relaxed">
+                                Relieve lumbar and cervical disc pressure and nerve pain with robotic traction — no surgery required.
+                            </p>
+                        </div>
+                        <div class="pt-4 flex justify-between items-center border-t border-slate-200/60 mt-4">
+                            <span class="text-xs font-semibold text-brand-mint bg-brand-mintLight px-2.5 py-1 rounded-md">Spine & Neck</span>
+                            <a href="#booking-section" class="text-brand-mint hover:text-brand-mint/80 font-bold text-sm flex items-center gap-1">
+                                Book a Consult
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 (Sports) -->
+                    <div class="treatment-card border border-slate-100 rounded-2xl bg-brand-bg p-6 lg:p-8 space-y-4 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between" data-category="sports">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
+                                <i data-lucide="activity" class="w-6 h-6 text-emerald-700"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-dark">Sports Injury Rehabilitation</h3>
+                            <p class="text-sm text-brand-slate leading-relaxed">
+                                Fast-track protocols for sprains, tendon tears, and biomechanical correction — built for a safe return to sport.
+                            </p>
+                        </div>
+                        <div class="pt-4 flex justify-between items-center border-t border-slate-200/60 mt-4">
+                            <span class="text-xs font-semibold text-emerald-700 bg-emerald-55 px-2.5 py-1 rounded-md">Sports Injuries</span>
+                            <a href="#booking-section" class="text-brand-mint hover:text-brand-mint/80 font-bold text-sm flex items-center gap-1">
+                                Book a Consult
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 (Rehab) -->
+                    <div class="treatment-card border border-slate-100 rounded-2xl bg-brand-bg p-6 lg:p-8 space-y-4 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between" data-category="rehab">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center">
+                                <i data-lucide="bandage" class="w-6 h-6 text-blue-700"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-dark">Post-Surgical Joint Rehab</h3>
+                            <p class="text-sm text-brand-slate leading-relaxed">
+                                Custom programs for knee and hip replacement, ACL reconstruction, and rotator cuff repair.
+                            </p>
+                        </div>
+                        <div class="pt-4 flex justify-between items-center border-t border-slate-200/60 mt-4">
+                            <span class="text-xs font-semibold text-blue-700 bg-blue-55 px-2.5 py-1 rounded-md">Post-Op & Joints</span>
+                            <a href="#booking-section" class="text-brand-mint hover:text-brand-mint/80 font-bold text-sm flex items-center gap-1">
+                                Book a Consult
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 (Spine) -->
+                    <div class="treatment-card border border-slate-100 rounded-2xl bg-brand-bg p-6 lg:p-8 space-y-4 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between" data-category="spine">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-mintLight text-brand-mint flex items-center justify-center">
+                                <i data-lucide="sparkles" class="w-6 h-6 text-brand-mint"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-dark">Myofascial & Trigger Point Release</h3>
+                            <p class="text-sm text-brand-slate leading-relaxed">
+                                Modern manual therapy and clinical massage to release chronic muscle knots, joint stiffness, and tight tendons.
+                            </p>
+                        </div>
+                        <div class="pt-4 flex justify-between items-center border-t border-slate-200/60 mt-4">
+                            <span class="text-xs font-semibold text-brand-mint bg-brand-mintLight px-2.5 py-1 rounded-md">Spine & Neck</span>
+                            <a href="#booking-section" class="text-brand-mint hover:text-brand-mint/80 font-bold text-sm flex items-center gap-1">
+                                Book a Consult
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 (Sports) -->
+                    <div class="treatment-card border border-slate-100 rounded-2xl bg-brand-bg p-6 lg:p-8 space-y-4 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between" data-category="sports">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
+                                <i data-lucide="target" class="w-6 h-6 text-emerald-700"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-dark">Dry Needling & Shockwave Therapy</h3>
+                            <p class="text-sm text-brand-slate leading-relaxed">
+                                Sterile dry needling paired with shockwave pulses to interrupt deep pain signals and accelerate tissue repair.
+                            </p>
+                        </div>
+                        <div class="pt-4 flex justify-between items-center border-t border-slate-200/60 mt-4">
+                            <span class="text-xs font-semibold text-emerald-700 bg-emerald-55 px-2.5 py-1 rounded-md">Sports Injuries</span>
+                            <a href="#booking-section" class="text-brand-mint hover:text-brand-mint/80 font-bold text-sm flex items-center gap-1">
+                                Book a Consult
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 (Rehab) -->
+                    <div class="treatment-card border border-slate-100 rounded-2xl bg-brand-bg p-6 lg:p-8 space-y-4 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between" data-category="rehab">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center">
+                                <i data-lucide="users" class="w-6 h-6 text-blue-700"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-dark">Balance & Mobility for Seniors</h3>
+                            <p class="text-sm text-brand-slate leading-relaxed">
+                                Fall-prevention mobility programs that strengthen weak joints and restore control for daily activity.
+                            </p>
+                        </div>
+                        <div class="pt-4 flex justify-between items-center border-t border-slate-200/60 mt-4">
+                            <span class="text-xs font-semibold text-blue-700 bg-blue-55 px-2.5 py-1 rounded-md">Post-Op & Joints</span>
+                            <a href="#booking-section" class="text-brand-mint hover:text-brand-mint/80 font-bold text-sm flex items-center gap-1">
+                                Book a Consult
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Demo Clinic Section (Minimalist White-Space UX Refactor) -->
+        <section id="why-choose-us" class="py-20 bg-brand-bg border-t border-b border-slate-100" aria-labelledby="why-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                    <span class="text-sm font-bold tracking-widest text-brand-mint uppercase">The Demo Advantage</span>
+                    <h2 id="why-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-dark">
+                        A New Standard in Non-Surgical Rehabilitation
+                    </h2>
+                    <p class="text-lg text-brand-slate">
+                        Evidence-based, individual care — free of routine and built around your privacy.
+                    </p>
+                </div>
+
+                <!-- Clean, Balanced 3-Column Grid for Minimalist White-Space UX -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    
+                    <!-- Benefit Column 1 -->
+                    <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 p-2 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-brand-mint shadow-sm">
+                            <i data-lucide="user-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark">One-on-One Care</h3>
+                        <p class="text-sm text-brand-slate leading-relaxed max-w-sm">
+                            Every minute of your session is spent under the direct supervision of your physiotherapist — no assistants, no handoffs.
+                        </p>
+                    </div>
+
+                    <!-- Benefit Column 2 -->
+                    <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 p-2 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-brand-mint shadow-sm">
+                            <i data-lucide="scan" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark">Advanced Biomechanical Assessment</h3>
+                        <p class="text-sm text-brand-slate leading-relaxed max-w-sm">
+                            Pinpoint the root cause of pain with high-precision posture, angle, and gait analysis systems.
+                        </p>
+                    </div>
+
+                    <!-- Benefit Column 3 -->
+                    <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 p-2 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-brand-mint shadow-sm">
+                            <i data-lucide="clipboard-list" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark">Dynamic Exercise Plans</h3>
+                        <p class="text-sm text-brand-slate leading-relaxed max-w-sm">
+                            Online access to home correction videos, continuously updated to match your real progress at the clinic.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Grid Section with Floating Micro-Credentials -->
+        <section id="doctors" class="py-16 bg-white border-b border-slate-100" aria-labelledby="doctors-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                    <span class="text-sm font-bold tracking-widest text-brand-mint uppercase">Doctors & Specialists</span>
+                    <h2 id="doctors-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-dark">
+                        Board-Certified, Experienced Care
+                    </h2>
+                    <p class="text-lg text-brand-slate">
+                        A blend of academic expertise and top-tier clinical experience, guiding your treatment with precision.
+                    </p>
+                </div>
+
+                <!-- Doctors Grid -->
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    
+                    <!-- Doctor 1: Dr. Maryam Jafarpour -->
+                    <div class="group relative overflow-hidden rounded-3xl bg-brand-bg shadow-lg border border-slate-100 flex flex-col">
+                        <div class="relative aspect-[3/4] overflow-hidden">
+                        <img src="pic/eros-reyes-cabrera-RtakOBTTdvY-unsplash-1.webp" 
+                                 alt="Dr. Maryam Jafarpour" 
+                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                                 loading="lazy">
+                            <!-- Floating Glassmorphic Badge with depth shift on hover -->
+                            <div class="absolute bottom-6 left-6 backdrop-blur-md bg-white/70 rounded-full px-4 py-1.5 shadow-md text-sm font-medium text-brand-dark border border-white/20 transition-all duration-300 group-hover:-translate-y-2 group-hover:translate-x-2">
+                                University of Tehran Graduate
+                            </div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-brand-dark">Dr. Sarah Miller </h3>
+                            <p class="text-brand-mint font-semibold text-sm mt-1">Clinic Director & Orthopedic Physiotherapist</p>
+                            <p class="text-xs text-brand-slate mt-2">Member, 15+ years of clinical practice</p>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2: Dr. Reihaneh Abedi -->
+                    <div class="group relative overflow-hidden rounded-3xl bg-brand-bg shadow-lg border border-slate-100 flex flex-col">
+                        <div class="relative aspect-[3/4] overflow-hidden">
+                            <img src="pic/nolan-manning-5vgIpVeYMb8-unsplash.webp" 
+                                 alt="Dr. Reihaneh Abedi" 
+                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                                 loading="lazy">
+                            <!-- Floating Glassmorphic Badge with depth shift on hover -->
+                            <div class="absolute bottom-6 left-6 backdrop-blur-md bg-white/70 rounded-full px-4 py-1.5 shadow-md text-sm font-medium text-brand-dark border border-white/20 transition-all duration-300 group-hover:-translate-y-2 group-hover:translate-x-2">
+                                Member, Iranian Physiotherapy Association
+                            </div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-brand-dark">Dr. Reihaneh Abedi</h3>
+                            <p class="text-brand-mint font-semibold text-sm mt-1">Sports & Neurological Rehabilitation Specialist</p>
+                            <p class="text-xs text-brand-slate mt-2">Honors graduate, advanced exercise therapy instructor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Appointment Booking Wizard Section -->
+        <section id="booking-section" class="py-16 bg-white scroll-mt-24" aria-labelledby="booking-heading">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                
+                <div class="text-center space-y-4 mb-10">
+                    <span class="text-xs font-bold tracking-widest text-brand-mint uppercase bg-brand-mintLight px-4 py-1.5 rounded-full border border-brand-mint/10">Online Booking Portal</span>
+                    <h2 id="booking-heading" class="text-3xl sm:text-4xl font-extrabold text-brand-dark">Book Your Initial Evaluation</h2>
+                    <p class="text-brand-slate max-w-xl mx-auto">Complete the form below to hold your slot. Every step is confirmed instantly.</p>
+                </div>
+
+                <!-- Booking Container -->
+                <div class="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden">
+                    
+                    <!-- Progress Bar Header -->
+                    <div class="bg-brand-dark px-6 py-4 flex items-center justify-between border-b border-slate-800">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-brand-mint animate-pulse"></span>
+                            <span class="text-xs font-semibold text-teal-400 tracking-wider uppercase">Booking system active</span>
+                        </div>
+                        <div class="text-xs font-bold text-slate-300" id="booking-step-indicator" aria-live="polite">
+                            Step 1 of 3
+                        </div>
+                    </div>
+
+                    <!-- Step Progress Indicator Nodes -->
+                    <div class="px-6 md:px-12 py-6 bg-slate-50 border-b border-slate-100 flex justify-between items-center relative">
+                        <div class="absolute h-0.5 bg-slate-200 left-12 right-12 top-1/2 -translate-y-1/2 z-0"></div>
+                        <!-- Progress fill starts from the left in LTR -->
+                        <div id="progress-bar-fill" class="absolute h-0.5 bg-brand-mint left-12 top-1/2 -translate-y-1/2 z-0 transition-all duration-300" style="width: 0%;"></div>
+
+                        <!-- Step 1 Node -->
+                        <div class="relative z-10 flex flex-col items-center gap-2">
+                            <span id="node-step-1" class="w-8 h-8 rounded-full bg-brand-mint text-white flex items-center justify-center text-xs font-extrabold shadow-md shadow-brand-mint/20 transition-colors duration-300">1</span>
+                            <span class="text-[10px] sm:text-xs font-semibold text-brand-dark">Treatment</span>
+                        </div>
+
+                        <!-- Step 2 Node -->
+                        <div class="relative z-10 flex flex-col items-center gap-2">
+                            <span id="node-step-2" class="w-8 h-8 rounded-full bg-slate-200 text-brand-slate flex items-center justify-center text-xs font-extrabold transition-colors duration-300">2</span>
+                            <span class="text-[10px] sm:text-xs font-semibold text-brand-slate">Scheduling</span>
+                        </div>
+
+                        <!-- Step 3 Node -->
+                        <div class="relative z-10 flex flex-col items-center gap-2">
+                            <span id="node-step-3" class="w-8 h-8 rounded-full bg-slate-200 text-brand-slate flex items-center justify-center text-xs font-extrabold transition-colors duration-300">3</span>
+                            <span class="text-[10px] sm:text-xs font-semibold text-brand-slate">Contact Details</span>
+                        </div>
+                    </div>
+
+                    <!-- Booking Wizard Form -->
+                    <form id="booking-wizard-form" class="p-6 md:p-10 space-y-8" novalidate>
+                        
+                        <!-- Step 1 Panel: Choose Service -->
+                        <div id="panel-step-1" class="step-panel space-y-6" role="group" aria-labelledby="step-1-title">
+                            <h3 id="step-1-title" class="text-xl font-bold text-brand-dark flex items-center gap-2">
+                                <span class="text-brand-mint">01.</span> Which service are you interested in?
+                            </h3>
+                            
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <label class="relative flex p-4 rounded-xl border border-slate-200 bg-white cursor-pointer hover:border-brand-mint hover:bg-teal-50/20 transition-all focus-within:ring-2 focus-within:ring-brand-mint">
+                                    <input type="radio" name="treatment_type" value="Physiotherapy" class="sr-only" checked>
+                                    <div class="flex items-start gap-3">
+                                        <div class="mt-0.5 text-brand-mint flex items-center justify-center text-lg">
+                                            <i data-lucide="lightbulb" class="w-5 h-5 text-brand-mint"></i>
+                                        </div>
+                                        <div>
+                                            <span class="block text-sm font-bold text-brand-dark">General & Spinal Physiotherapy</span>
+                                            <span class="block text-xs text-brand-slate mt-1">Physical evaluation plus a personalized 1:1 treatment plan.</span>
+                                        </div>
+                                    </div>
+                                    <span class="absolute top-4 right-4 w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center input-marker"></span>
+                                </label>
+
+                                <label class="relative flex p-4 rounded-xl border border-slate-200 bg-white cursor-pointer hover:border-brand-mint hover:bg-teal-50/20 transition-all focus-within:ring-2 focus-within:ring-brand-mint">
+                                    <input type="radio" name="treatment_type" value="Sports Injury" class="sr-only">
+                                    <div class="flex items-start gap-3">
+                                        <div class="mt-0.5 text-brand-mint flex items-center justify-center text-lg">
+                                            <i data-lucide="activity" class="w-5 h-5 text-brand-mint"></i>
+                                        </div>
+                                        <div>
+                                            <span class="block text-sm font-bold text-brand-dark">Specialist Sports Physiotherapy</span>
+                                            <span class="block text-xs text-brand-slate mt-1">Fast-track rehab protocols to get athletes back in play.</span>
+                                        </div>
+                                    </div>
+                                    <span class="absolute top-4 right-4 w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center input-marker"></span>
+                                </label>
+
+                                <label class="relative flex p-4 rounded-xl border border-slate-200 bg-white cursor-pointer hover:border-brand-mint hover:bg-teal-50/20 transition-all focus-within:ring-2 focus-within:ring-brand-mint">
+                                    <input type="radio" name="treatment_type" value="Post-Op Recovery" class="sr-only">
+                                    <div class="flex items-start gap-3">
+                                        <div class="mt-0.5 text-brand-mint flex items-center justify-center text-lg">
+                                            <i data-lucide="heart-pulse" class="w-5 h-5 text-brand-mint"></i>
+                                        </div>
+                                        <div>
+                                            <span class="block text-sm font-bold text-brand-dark">Post-Surgical Rehabilitation</span>
+                                            <span class="block text-xs text-brand-slate mt-1">Managing joint stiffness and accelerating safe recovery after surgery.</span>
+                                        </div>
+                                    </div>
+                                    <span class="absolute top-4 right-4 w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center input-marker"></span>
+                                </label>
+
+                                <label class="relative flex p-4 rounded-xl border border-slate-200 bg-white cursor-pointer hover:border-brand-mint hover:bg-teal-50/20 transition-all focus-within:ring-2 focus-within:ring-brand-mint">
+                                    <input type="radio" name="treatment_type" value="Massage Clinic" class="sr-only">
+                                    <div class="flex items-start gap-3">
+                                        <div class="mt-0.5 text-brand-mint flex items-center justify-center text-lg">
+                                            <i data-lucide="sparkles" class="w-5 h-5 text-brand-mint"></i>
+                                        </div>
+                                        <div>
+                                            <span class="block text-sm font-bold text-brand-dark">Therapeutic Massage & Fascia Release</span>
+                                            <span class="block text-xs text-brand-slate mt-1">Relieving acute muscle tightness and nerve tension knots.</span>
+                                        </div>
+                                    </div>
+                                    <span class="absolute top-4 right-4 w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center input-marker"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 Panel: Calendar & Time Slots -->
+                        <div id="panel-step-2" class="step-panel space-y-6 hidden" role="group" aria-labelledby="step-2-title">
+                            <h3 id="step-2-title" class="text-xl font-bold text-brand-dark flex items-center gap-2">
+                                <span class="text-brand-mint">02.</span> Choose your preferred date and time
+                            </h3>
+
+                            <div class="grid md:grid-cols-12 gap-6">
+                                <!-- Calendar Layout (Interactive JS mockup) -->
+                                <div class="md:col-span-7 bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                                    <p class="text-xs font-bold uppercase tracking-wider text-brand-slate mb-3 text-center" id="calendar-header-label">Clinic Booking Calendar</p>
+                                    <div class="grid grid-cols-7 gap-1 text-center text-xs font-bold text-slate-500 mb-2">
+                                        <span>Sa</span><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span>
+                                    </div>
+                                    <div class="grid grid-cols-7 gap-1 text-center font-semibold text-sm" id="calendar-slots-grid">
+                                        <!-- Days injected dynamically via script -->
+                                    </div>
+                                </div>
+
+                                <!-- Time Slot Layout -->
+                                <div class="md:col-span-5 space-y-4">
+                                    <p class="text-xs font-bold uppercase tracking-wider text-brand-slate">Available Time Slots</p>
+                                    <div class="grid grid-cols-2 gap-2" id="time-slots-container">
+                                        <label class="time-label text-center py-3 border border-slate-200 rounded-xl font-bold text-xs cursor-pointer block hover:border-brand-mint hover:bg-teal-50/20 focus-within:ring-2 focus-within:ring-brand-mint">
+                                            <input type="radio" name="booking_time" value="08:30 AM" class="sr-only">
+                                            8:30 AM
+                                        </label>
+                                        <label class="time-label text-center py-3 border border-slate-200 rounded-xl font-bold text-xs cursor-pointer block hover:border-brand-mint hover:bg-teal-50/20 focus-within:ring-2 focus-within:ring-brand-mint">
+                                            <input type="radio" name="booking_time" value="10:00 AM" class="sr-only">
+                                            10:00 AM
+                                        </label>
+                                        <label class="time-label text-center py-3 border border-slate-200 rounded-xl font-bold text-xs cursor-pointer block hover:border-brand-mint hover:bg-teal-50/20 focus-within:ring-2 focus-within:ring-brand-mint">
+                                            <input type="radio" name="booking_time" value="11:30 AM" class="sr-only" checked>
+                                            11:30 AM
+                                        </label>
+                                        <label class="time-label text-center py-3 border border-slate-200 rounded-xl font-bold text-xs cursor-pointer block hover:border-brand-mint hover:bg-teal-50/20 focus-within:ring-2 focus-within:ring-brand-mint">
+                                            <input type="radio" name="booking_time" value="02:00 PM" class="sr-only">
+                                            2:00 PM
+                                        </label>
+                                        <label class="time-label text-center py-3 border border-slate-200 rounded-xl font-bold text-xs cursor-pointer block hover:border-brand-mint hover:bg-teal-50/20 focus-within:ring-2 focus-within:ring-brand-mint">
+                                            <input type="radio" name="booking_time" value="03:30 PM" class="sr-only">
+                                            3:30 PM
+                                        </label>
+                                        <label class="time-label text-center py-3 border border-slate-200 rounded-xl font-bold text-xs cursor-pointer block hover:border-brand-mint hover:bg-teal-50/20 focus-within:ring-2 focus-within:ring-brand-mint">
+                                            <input type="radio" name="booking_time" value="05:00 PM" class="sr-only">
+                                            5:00 PM
+                                        </label>
+                                    </div>
+                                    <div class="p-4 bg-brand-mintLight border border-teal-200/50 rounded-xl text-brand-mint text-[11px] font-medium leading-relaxed flex items-start gap-2">
+                                        <i data-lucide="lock" class="w-4 h-4 flex-shrink-0 mt-0.5"></i>
+                                        <span>Reschedule or cancel free of charge up to 24 hours before your appointment.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 Panel: Personal/Contact Details -->
+                        <div id="panel-step-3" class="step-panel space-y-6 hidden" role="group" aria-labelledby="step-3-title">
+                            <h3 id="step-3-title" class="text-xl font-bold text-brand-dark flex items-center gap-2">
+                                <span class="text-brand-mint">03.</span> Patient contact details
+                            </h3>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="space-y-2">
+                                    <label for="p-firstname" class="block text-xs font-bold uppercase tracking-wider text-brand-slate">First Name *</label>
+                                    <input type="text" id="p-firstname" name="first_name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm focus:border-brand-mint focus:ring-2 focus:ring-brand-mint focus:outline-none" placeholder="First name">
+                                    <p class="error-msg text-red-500 text-xs hidden" id="err-first_name">Please enter a valid first name.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="p-lastname" class="block text-xs font-bold uppercase tracking-wider text-brand-slate">Last Name *</label>
+                                    <input type="text" id="p-lastname" name="last_name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm focus:border-brand-mint focus:ring-2 focus:ring-brand-mint focus:outline-none" placeholder="Last name">
+                                    <p class="error-msg text-red-500 text-xs hidden" id="err-last_name">Please enter a valid last name.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="p-email" class="block text-xs font-bold uppercase tracking-wider text-brand-slate">Email Address *</label>
+                                    <input type="email" id="p-email" name="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm focus:border-brand-mint focus:ring-2 focus:ring-brand-mint focus:outline-none" placeholder="name@domain.com">
+                                    <p class="error-msg text-red-500 text-xs hidden" id="err-email">Please enter a valid email address.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="p-phone" class="block text-xs font-bold uppercase tracking-wider text-brand-slate">Mobile Number *</label>
+                                    <input type="tel" id="p-phone" name="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm focus:border-brand-mint focus:ring-2 focus:ring-brand-mint focus:outline-none" placeholder="0912 345 6789">
+                                    <p class="error-msg text-red-500 text-xs hidden" id="err-phone">Please enter a valid mobile number.</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="p-notes" class="block text-xs font-bold uppercase tracking-wider text-brand-slate">Notes & Medical History (optional)</label>
+                                <textarea id="p-notes" name="notes" rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm focus:border-brand-mint focus:ring-2 focus:ring-brand-mint focus:outline-none" placeholder="Note any prior fractures, surgeries, sprains, or current symptoms."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Success Screen Block -->
+                        <div id="panel-success" class="step-panel hidden text-center space-y-6 py-8" role="region" aria-live="polite">
+                            <div class="w-20 h-20 bg-brand-mintLight text-brand-mint rounded-full flex items-center justify-center text-4xl mx-auto shadow-md">
+                                <i data-lucide="check-circle-2" class="w-12 h-12 text-brand-mint"></i>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="text-2xl font-extrabold text-brand-dark">Your Appointment Request Was Submitted</h3>
+                                <p class="text-sm text-brand-slate max-w-md mx-auto">
+                                    Your reference code is <strong id="success-ref" class="text-brand-dark">#APH-2026-88</strong>. We'll confirm your final appointment time by SMS or email shortly.
+                                </p>
+                            </div>
+                            <div class="pt-4 flex justify-center">
+                                <button type="button" id="btn-reset-booking" class="bg-brand-mint hover:bg-brand-mint/90 text-white font-bold py-3 px-6 rounded-xl text-sm shadow-md transition-colors">
+                                    Book Another Appointment
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Panel Control Actions -->
+                        <div id="booking-actions" class="flex justify-between items-center border-t border-slate-100 pt-6">
+                            <!-- Back button points left in LTR -->
+                            <button type="button" id="btn-booking-prev" class="px-5 py-3 rounded-xl border border-slate-200 text-brand-slate hover:bg-slate-55 font-bold text-sm transition-colors invisible flex items-center gap-1.5">
+                                &larr; <span>Back</span>
+                            </button>
+                            <!-- Next button points right in LTR -->
+                            <button type="button" id="btn-booking-next" class="px-6 py-3.5 rounded-xl bg-brand-mint hover:bg-brand-mint/90 text-white font-bold text-sm shadow-md transition-all duration-200 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint">
+                                <span>Next Step</span> &rarr;
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Patient Success Stories (Testimonials) -->
+        <section id="testimonials" class="py-16 bg-brand-bg border-t border-b border-slate-100" aria-labelledby="testimonials-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+                    <div class="space-y-4">
+                        <span class="text-sm font-bold tracking-widest text-brand-mint uppercase">Real Patient Results</span>
+                        <h2 id="testimonials-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-dark">
+                            1,200+ Recovery Stories, Pain-Free
+                        </h2>
+                    </div>
+                    <!-- Slider Navigation Controllers -->
+                    <div class="flex gap-2">
+                        <!-- Previous card moves viewport left in LTR -->
+                        <button id="slider-prev-btn" class="w-12 h-12 rounded-xl border border-slate-200 bg-white flex items-center justify-center text-brand-slate hover:text-brand-dark hover:border-slate-300 transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint" aria-label="View previous testimonial">
+                            &larr;
+                        </button>
+                        <!-- Next card moves viewport right in LTR -->
+                        <button id="slider-next-btn" class="w-12 h-12 rounded-xl border border-slate-200 bg-white flex items-center justify-center text-brand-slate hover:text-brand-dark hover:border-slate-300 transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint" aria-label="View next testimonial">
+                            &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Horizontal Testimonial Grid Wrapper -->
+                <div class="relative overflow-hidden py-2">
+                    <div id="testimonial-slider" class="flex gap-6 transition-transform duration-500 ease-out" style="transform: translateX(0px);">
+                        
+                        <!-- Testimonial 1 -->
+                        <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 bg-white p-6 lg:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between space-y-6">
+                            <div class="space-y-4">
+                                <div class="flex text-yellow-400 gap-1" aria-label="5 stars">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <blockquote class="text-brand-slate italic text-sm leading-relaxed">
+                                    After major ACL reconstruction, I worried I'd never return to my old level of sport. Demo didn't just resolve the pain — they rebuilt my stabilizing muscles from the ground up.
+                                </blockquote>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
+                                <div class="w-10 h-10 rounded-full bg-brand-mintLight text-brand-mint font-extrabold text-sm flex items-center justify-center" aria-hidden="true">
+                                    MK
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-bold text-brand-dark text-sm">Makan Karimi</p>
+                                    <p class="text-[11px] text-brand-slate">Amateur footballer (ACL surgery recovery)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 bg-white p-6 lg:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between space-y-6">
+                            <div class="space-y-4">
+                                <div class="flex text-yellow-400 gap-1" aria-label="5 stars">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <blockquote class="text-brand-slate italic text-sm leading-relaxed">
+                                    Radiating pain from a lumbar disc made everyday tasks difficult. After a few sessions of manual therapy and decompression here, the drop in pain was unbelievable.
+                                </blockquote>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
+                                <div class="w-10 h-10 rounded-full bg-brand-mintLight text-brand-mint font-extrabold text-sm flex items-center justify-center" aria-hidden="true">
+                                    MS
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-bold text-brand-dark text-sm">Mina Sadat</p>
+                                    <p class="text-[11px] text-brand-slate">Retired teacher (non-surgical spine treatment)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 bg-white p-6 lg:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between space-y-6">
+                            <div class="space-y-4">
+                                <div class="flex text-yellow-400 gap-1" aria-label="5 stars">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <blockquote class="text-brand-slate italic text-sm leading-relaxed">
+                                    Demo's biggest strength is zero wasted time and precisely coordinated one-on-one sessions. Insurance paperwork was issued fast, and the front desk was remarkably responsive.
+                                </blockquote>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
+                                <div class="w-10 h-10 rounded-full bg-brand-mintLight text-brand-mint font-extrabold text-sm flex items-center justify-center" aria-hidden="true">
+                                    SS
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-bold text-brand-dark text-sm">Saman Sohrabi</p>
+                                    <p class="text-[11px] text-brand-slate">Software developer & web designer (shoulder & posture correction)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 bg-white p-6 lg:p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between space-y-6">
+                            <div class="space-y-4">
+                                <div class="flex text-yellow-400 gap-1" aria-label="5 stars">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <blockquote class="text-brand-slate italic text-sm leading-relaxed">
+                                    Their digital gait analysis system showed my running shin pain traced back to hip rotation. That precise diagnosis prevented months of the wrong treatment.
+                                </blockquote>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
+                                <div class="w-10 h-10 rounded-full bg-brand-mintLight text-brand-mint font-extrabold text-sm flex items-center justify-center" aria-hidden="true">
+                                    PM
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-bold text-brand-dark text-sm">Parinaz Mahmoudi</p>
+                                    <p class="text-[11px] text-brand-slate">Amateur endurance runner (postural therapy)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQs Section (Accessible Accordion) -->
+        <section id="faq" class="py-16 bg-white" aria-labelledby="faq-heading">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                
+                <div class="text-center space-y-4 mb-12">
+                    <span class="text-sm font-bold tracking-widest text-brand-mint uppercase">Common Questions</span>
+                    <h2 id="faq-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-dark">Frequently Asked Questions</h2>
+                    <p class="text-brand-slate">Everything you need to know about booking, insurance, and your first evaluation.</p>
+                </div>
+
+                <!-- Accordion Core -->
+                <div class="space-y-4">
+                    
+                    <!-- Accordion Item 1 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 focus-within:ring-2 focus-within:ring-brand-mint">
+                        <button type="button" class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left font-bold text-brand-dark hover:bg-slate-55 transition-colors" aria-expanded="false" aria-controls="faq-ans-1">
+                            <span>Do I need a doctor's referral to start treatment?</span>
+                            <span class="faq-icon text-xl text-slate-400 font-normal transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-1" class="faq-panel hidden" role="region" aria-labelledby="faq-trigger-1">
+                            <div class="px-6 pb-5 text-sm text-brand-slate leading-relaxed border-t border-slate-100 pt-3">
+                                No — you can book your initial evaluation directly, without a referral. That said, we recommend checking your supplemental insurance terms for reimbursement.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 focus-within:ring-2 focus-within:ring-brand-mint">
+                        <button type="button" class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left font-bold text-brand-dark hover:bg-slate-55 transition-colors" aria-expanded="false" aria-controls="faq-ans-2">
+                            <span>What happens during the first evaluation session?</span>
+                            <span class="faq-icon text-xl text-slate-400 font-normal transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-2" class="faq-panel hidden" role="region" aria-labelledby="faq-trigger-2">
+                            <div class="px-6 pb-5 text-sm text-brand-slate leading-relaxed border-t border-slate-100 pt-3">
+                                The session runs about 60 minutes. We assess range of motion, biomechanics, and orthopedic function in detail, then begin the first phase of a treatment plan tailored to your needs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 focus-within:ring-2 focus-within:ring-brand-mint">
+                        <button type="button" class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left font-bold text-brand-dark hover:bg-slate-55 transition-colors" aria-expanded="false" aria-controls="faq-ans-3">
+                            <span>How does payment and insurance documentation work?</span>
+                            <span class="faq-icon text-xl text-slate-400 font-normal transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-3" class="faq-panel hidden" role="region" aria-labelledby="faq-trigger-3">
+                            <div class="px-6 pb-5 text-sm text-brand-slate leading-relaxed border-t border-slate-100 pt-3">
+                                We issue an official, stamped invoice from your treating physician so you can easily reclaim the majority of costs through your supplemental insurance provider.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 focus-within:ring-2 focus-within:ring-brand-mint">
+                        <button type="button" class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left font-bold text-brand-dark hover:bg-slate-55 transition-colors" aria-expanded="false" aria-controls="faq-ans-4">
+                            <span>How many physiotherapy sessions will I typically need?</span>
+                            <span class="faq-icon text-xl text-slate-400 font-normal transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-4" class="faq-panel hidden" role="region" aria-labelledby="faq-trigger-4">
+                            <div class="px-6 pb-5 text-sm text-brand-slate leading-relaxed border-t border-slate-100 pt-3">
+                                It depends on the type and severity of the injury. Acute muscle spasms typically resolve within 4–6 sessions, while rehabilitation after major joint surgery may take 8–12 weeks.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="bg-brand-dark text-slate-300 pt-16 pb-8 border-t border-slate-800" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-8 md:gap-12 mb-12">
+            
+            <!-- Branding Area -->
+            <div class="md:col-span-4 space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-brand-mint flex items-center justify-center text-white font-bold" aria-hidden="true">
+                        <i data-lucide="activity" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="text-lg font-bold tracking-tight text-white">Demo Physiotherapy</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    A specialist clinic for evaluation, joint recovery, and sports injury physiotherapy — grounded in evidence-based medicine and modern standards of care.
+                </p>
+                <div class="pt-2 text-xs text-slate-400 flex items-center gap-1">
+                    <i data-lucide="clock" class="w-4 h-4 text-brand-mint"></i>
+                    <span>Hours: Sat–Wed 8:00 AM–8:00 PM | Thu 8:00 AM–2:00 PM</span>
+                </div>
+            </div>
+
+            <!-- Quick Site links -->
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="text-white text-sm font-bold uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#treatments" class="hover:text-brand-mint transition-colors">Treatment List</a></li>
+                    <li><a href="#why-choose-us" class="hover:text-brand-mint transition-colors">Why Demo</a></li>
+                    <li><a href="#doctors" class="hover:text-brand-mint transition-colors">Meet the Doctors</a></li>
+                    <li><a href="#faq" class="hover:text-brand-mint transition-colors">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Support Resources -->
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="text-white text-sm font-bold uppercase tracking-wider">Policies</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#" class="hover:text-brand-mint transition-colors">Patient Privacy</a></li>
+                    <li><a href="#" class="hover:text-brand-mint transition-colors">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-brand-mint transition-colors">Accessibility Statement</a></li>
+                </ul>
+            </div>
+
+            <!-- Location info -->
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="text-white text-sm font-bold uppercase tracking-wider">Get in Touch</h4>
+                <div class="text-xs space-y-2.5 text-slate-400">
+                    <p class="flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-brand-mint flex-shrink-0"></i>
+                        <span>Valiasr St., near Vanak Square, No. 100, Tehran</span>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-brand-mint flex-shrink-0"></i>
+                        <span>021-5550199</span>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i data-lucide="mail" class="w-4 h-4 text-brand-mint flex-shrink-0"></i>
+                        <span>info@rootaphysio.com</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Compliance & Accessibility Statement -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+            <p>© 2026 Demo Physiotherapy Clinic. All rights reserved.</p>
+            <p class="flex items-center gap-2">
+                <i data-lucide="accessibility" class="w-4 h-4 text-slate-500"></i>
+                <span class="hover:underline cursor-pointer">Fully WCAG 2.1 AA compliant</span> • Sub-second load time
+            </p>
+        </div>
+    </footer>
+
+    <!-- Sticky Bottom CTA for Mobile Conversions -->
+    <div id="sticky-mobile-cta" class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 p-4 flex items-center justify-between md:hidden transform translate-y-full transition-transform duration-300 shadow-[0_-4px_12px_rgba(0,0,0,0.05)]" aria-label="Quick mobile action">
+        <div class="text-left">
+            <p class="text-[10px] uppercase font-bold tracking-wider text-brand-slate">Specialist Care</p>
+            <p class="text-sm font-bold text-brand-dark">Free Initial Consult</p>
+        </div>
+        <a href="#booking-section" class="bg-brand-mint hover:bg-brand-mint/90 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition-colors shadow-md">
+            Book Online
+        </a>
+    </div>
+
+    <!-- Inject Lucide icons initialization, followed by the core functional app.js script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        });
+    </script>
+    <script src="js/main.js" defer></script>
+    </body>
+</html>

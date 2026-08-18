@@ -1,0 +1,1 @@
+echo "Server is working" > fonts/test.txt
