@@ -46,7 +46,7 @@
 
 
 
-![Uploading Screencast From 2026-08-18 07-50-51.gif…]()
+<img width="500" height="281" alt="Screencast From 2026-08-18 07-50-51" src="https://github.com/user-attachments/assets/78dca513-5319-4cbc-bd50-aab76f965844" />
 
 
 
