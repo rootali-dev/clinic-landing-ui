@@ -46,7 +46,8 @@
 
 
 
-https://github.com/user-attachments/assets/c48f3d05-02e9-430a-b8f9-288a9376245d
+![Uploading Screencast From 2026-08-18 07-50-51.gif…]()
+
 
 
 > **Production Demo**: *Fold-locked responsive geometry, reactive calendar booking, zero-shift treatment filtering, and mobile interaction states.*
